@@ -1,3 +1,5 @@
 (ns functional.fac)
 
-(defn fac [n] (if (zero? n) 1 (* n (fac (dec n)))))
+(defn fac-it [f n] (if (zero? n) f (recur (* n f) (dec n))))
+
+(defn fac [n] (fac-it 1 n))

@@ -1,6 +1,6 @@
 (ns functional.fac-test
-  (:require [midje.sweet :refer [facts fact]]
-            [functional.fac :refer [fac]]))
+  (:require [functional.fac :refer [fac]]
+            [midje.sweet :refer [fact facts]]))
 
 (facts "about factorial"
        (fact "factorial of 1 equals 1"
