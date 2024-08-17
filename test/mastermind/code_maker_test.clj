@@ -4,4 +4,6 @@
 
 (facts "code maker"
        (fact "score guess with no matches"
-             (score [0 0 0 0] [1 1 1 1]) => []))
+             (score [0 0 0 0] [1 1 1 1]) => [])
+       (fact "score guesss with one position match"
+             (score [0 0 0 0] [0 1 1 1]) => [:pos]))
