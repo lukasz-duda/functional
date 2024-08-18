@@ -1,4 +1,4 @@
 (ns mastermind.code-maker)
 
 (defn score [code guess]
-  [(count (filter some? (map #(if (= %1 %2) :pos nil) code guess)))])
+  [(reduce + (map #(if (= %1 %2) 1 0) code guess))])
